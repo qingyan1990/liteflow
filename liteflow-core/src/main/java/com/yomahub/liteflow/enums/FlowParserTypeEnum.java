@@ -33,4 +33,13 @@ public enum FlowParserTypeEnum {
         this.name = name;
     }
 
+    public static FlowParserTypeEnum of(String type) {
+        for (FlowParserTypeEnum typeEnum : FlowParserTypeEnum.values()) {
+            if (typeEnum.type.equals(type)) {
+                return typeEnum;
+            }
+        }
+        return null;
+    }
+
 }
